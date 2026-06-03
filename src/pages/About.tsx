@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import gradVideo from '../assets/gradcelebration.mov';
+import gradVideo from '../assets/gradcelebration.mp4';
 import './About.css';
 
 const skills: Record<string, string[]> = {
