@@ -63,7 +63,7 @@ export default function About() {
               My path has never been linear. I've moved through assistant teaching, various types of scientific research, computational modeling, medical administration, the service industry, fashion merchandise sales, and even international runway modeling. This is an unconventional path I’ve taken, not in spite of ambition, but because of it! Each space I’ve been in has taught me something the others couldn't.
             </motion.p>
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
-              The throughline across all of it is people. A main driving factor in how I approach work and life is understanding how we think, what guides our behaviors, and where systems fail us. That's what brought me to UX and what keeps me pushing toward the intersection of human behavior and the ways technology has changed it. 
+              The throughline across all of it is people. A main driving factor in how I approach work and life is understanding how we think, what guides our behaviors, and where systems fail us. That's what brought me to where I am today and what keeps me pushing toward the intersection of human behavior and the ways technology has changed it. 
             </motion.p>
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
               Right now, I’m celebrating my MBS in Computer and Information Sciences at Rutgers, building customer-relations experience at Aritzia’s flagship location, and searching for a position that allows me to continue my uniquely authentic pursuit of knowledge. 

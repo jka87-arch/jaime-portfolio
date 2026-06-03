@@ -19,6 +19,18 @@ export function useNavTheme() {
     );
 
     sections.forEach(s => observer.observe(s));
+
+    // Set the correct theme immediately on mount without waiting for the
+    // first async intersection callback (fixes wrong color on hard refresh).
+    const initial = Array.from(sections).find(s => {
+      const rect = s.getBoundingClientRect();
+      return rect.top <= 80 && rect.bottom > 80;
+    }) ?? sections[0];
+    if (initial) {
+      const t = initial.getAttribute('data-nav-theme');
+      if (t) setTheme(t as 'blue' | 'cream' | 'transparent');
+    }
+
     return () => observer.disconnect();
   }, []);
 

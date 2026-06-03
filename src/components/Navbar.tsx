@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="navbar__inner">
         <Link to="/" className="navbar__logo">
           <img
-            src={navTheme === 'cream' ? logoJBlue : logoJCream}
+            src={scrolled || navTheme === 'cream' ? logoJBlue : logoJCream}
             alt="Jaime's Portie"
             className="navbar__logo-img navbar__logo-img--small"
           />

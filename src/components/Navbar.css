@@ -108,6 +108,25 @@
   color: var(--off-white);
 }
 
+/* When navbar has a light background (scrolled), always use dark link colors
+   regardless of the current section theme */
+.navbar--scrolled .navbar__link {
+  color: var(--mid-gray);
+}
+.navbar--scrolled .navbar__link:hover,
+.navbar--scrolled .navbar__link--active {
+  color: var(--near-black);
+}
+.navbar--scrolled .navbar__link::after {
+  background: var(--blue);
+}
+.navbar--scrolled .navbar__link--resume {
+  color: var(--blue);
+}
+.navbar--scrolled .navbar__link--resume:hover {
+  color: var(--blue-dim);
+}
+
 /* Burger */
 .navbar__burger {
   display: none;
