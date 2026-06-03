@@ -9,6 +9,7 @@ interface Props {
 }
 
 export default function ProjectCard({ project, index }: Props) {
+
   return (
     <motion.div
       data-nav-theme="cream"
@@ -28,8 +29,8 @@ export default function ProjectCard({ project, index }: Props) {
                 <span className="project-card__placeholder-num">0{index + 1}</span>
               </div>
             )}
-            {project.aiUsed && (
-              <span className="project-card__ai-badge">✦ AI-assisted</span>
+            {project.context && (
+              <span className="project-card__context-badge">{project.context}</span>
             )}
           </div>
 

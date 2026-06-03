@@ -43,7 +43,7 @@ export default function Navbar() {
             About
           </Link>
           <a
-            href="/resume.pdf"
+            href="/JaimeAMBS-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="navbar__link navbar__link--resume"
@@ -72,7 +72,7 @@ export default function Navbar() {
           >
             <Link to="/" className="navbar__mobile-link">Work</Link>
             <Link to="/about" className="navbar__mobile-link">About</Link>
-            <a href="/resume.pdf" target="_blank" className="navbar__mobile-link">Résumé ↗</a>
+            <a href="/JaimeAMBS-Resume.pdf" target="_blank" className="navbar__mobile-link">Résumé ↗</a>
           </motion.div>
         )}
       </AnimatePresence>

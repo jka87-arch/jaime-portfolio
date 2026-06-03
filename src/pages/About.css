@@ -60,6 +60,32 @@
   top: 7rem;
 }
 
+.about__video-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.about__bio-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about__video-play-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 2.5rem;
+}
+
 .about__photo-placeholder {
   width: 100%;
   aspect-ratio: 3/4;

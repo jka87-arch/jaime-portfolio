@@ -1,4 +1,51 @@
 import type { Project } from '../types';
+import pharmalliesThumb from '../assets/pharmallies-design-system.png';
+import pharmalliesPersona from '../assets/pharmalies-persona.png';
+import pharmalliesResearch from '../assets/pharmallies-research.png';
+import sdlcVer1 from '../assets/sdlc-ver1.png';
+import sdlcVer2 from '../assets/sdlc-ver2.png';
+import forteDesign from '../assets/forte-design.png';
+import forteSwot from '../assets/forte-swot.png';
+import forteCompanalysis from '../assets/forte-companlaysis.png';
+import forteVer1 from '../assets/forte-ver1.png';
+import coquelleDesign from '../assets/coquelle-design.png';
+import offscreenDesign from '../assets/offscreen-design.png';
+import offscreenWireframe1 from '../assets/offscreen-wireframe1.png';
+import offscreenWireframe2 from '../assets/offscreen-wirerame2.png';
+import offscreenWireframe3 from '../assets/offscreen-wireframe3.png';
+import offscreenExplore from '../assets/offscreen-explore.png';
+import offscreenResources from '../assets/offscreen-resources.png';
+import offscreenCommunity from '../assets/offscreen-community.png';
+import offscreenQuiz from '../assets/offscreen-quiz.png';
+import coq1 from '../assets/1.png';
+import coq2 from '../assets/2.png';
+import coq3 from '../assets/3.png';
+import coq4 from '../assets/4.png';
+import coq5 from '../assets/5.png';
+import coq6 from '../assets/6.png';
+import coq7 from '../assets/7.png';
+import coq8 from '../assets/8.png';
+import coq9 from '../assets/9.png';
+import coq10 from '../assets/10.png';
+import coq11 from '../assets/11.png';
+import coq12 from '../assets/12.png';
+import coq13 from '../assets/13.png';
+import coq14 from '../assets/14.png';
+import coq15 from '../assets/15.png';
+import coq16 from '../assets/16.png';
+import coq17 from '../assets/17.png';
+import coq18 from '../assets/18.png';
+import coq19 from '../assets/19.png';
+import coq20 from '../assets/20.png';
+import coq21 from '../assets/21.png';
+import coq22 from '../assets/22.png';
+import coq23 from '../assets/23.png';
+import coq24 from '../assets/24.png';
+import coq25 from '../assets/25.png';
+import coq26 from '../assets/26.png';
+import coq27 from '../assets/27.png';
+import coq28 from '../assets/28.png';
+import coq29 from '../assets/29.png';
 
 export const projects: Project[] = [
   {
@@ -6,50 +53,59 @@ export const projects: Project[] = [
     title: 'PharmAllies SOP Redesign',
     subtitle: 'Transforming a 76-page document into an intuitive enterprise experience',
     oneLiner: 'I led a 6-person team to redesign a complex SOP system that reduced cognitive load and improved usability for healthcare stakeholders.',
-    category: 'ux',
-    tags: ['UX Research', 'Information Architecture', 'Team Lead', 'Shipped'],
+    category: 'design',
+    context: 'Professional',
+    tags: ['UX Design', 'Market Research', 'Information Architecture', 'Team Lead'],
     year: 2025,
-    aiUsed: true,
-    thumbnail: '',
-    heroImage: '',
+    thumbnail: pharmalliesThumb,
+    heroImage: pharmalliesThumb,
     role: 'UXD Extern, Team Lead',
     overview: 'PharmAllies needed to overhaul their standard operating procedure system, which had grown into an unwieldy 76-page document that field users could barely navigate.',
     challenge: 'Starting with a fragmented information architecture, limited researcher access, and a 10-week deadline, the team had to transform a compliance-heavy document into an interactive, accessible experience.',
     process: [
       {
         heading: 'Discovery & Stakeholder Interviews',
-        body: 'We conducted structured interviews with 8 stakeholders across roles to map pain points and mental models around the existing SOP system.',
+        body: 'We conducted structured interviews with 14 stakeholders across roles to map pain points and mental models around the existing SOP system.',
       },
       {
         heading: 'Information Architecture Mapping',
-        body: 'Using card sorting and tree testing, we restructured the content hierarchy from a linear document into modular, role-based navigation.',
+        body: 'Using card sorting and tree testing, we restructured the content hierarchy from a linear document into modular, interactive interface.',
       },
       {
         heading: 'Prototype & Iteration',
         body: 'Built interactive Figma prototypes tested across two rounds of usability sessions, iterating on navigation patterns and content density.',
       },
+      {
+        heading: 'Clear Communication & Leadership',
+        body: 'Led a team of 4 UX designers across an agile sprint, coordinating with stakeholders to deliver an interactive interface redesign through structured weekly communication.',
+      },
     ],
-    aiWorkflow: 'Used Claude to synthesize 40+ pages of SOP documentation into structured IA themes in a fraction of the time, freeing the team to focus on design decisions rather than manual pattern extraction.',
     outcomes: [
-      '100% on-time delivery across all milestones',
-      'Prototype used in executive stakeholder presentation',
-      'Reduced task completion time by ~40% in usability testing',
+      '100% on-time delivery across all milestones using agile methodology',
+      'Mid-fidelity prototype used in executive stakeholder presentation',
+      'Facilitated weekly meeting with stakeholders and internal team members and delegated team responsibilities',
     ],
-    nextSteps: 'The next phase involves expanding the system to additional departments and integrating inline help patterns across all modules.',
+    nextSteps: 'The next phase involves high-fidelity iteration of iniital prototypes. The project remains confidential and to be completed',
+    media: [
+      { src: pharmalliesPersona, caption: 'User Persona — Dean Miller, Field Sales Representative' },
+      { src: pharmalliesResearch, caption: 'Stakeholder Research Synthesis & Pain Point Mapping' },
+      { src: sdlcVer1, caption: 'SDLC SOP Redesign — Version 1 Mid-Fidelity Prototype' },
+      { src: sdlcVer2, caption: 'SDLC SOP Redesign — Version 2 Iterated Prototype' },
+    ],
   },
   {
     slug: 'forte',
     title: 'Forte Product Design',
-    subtitle: 'Building AI-powered fashion experiences from the ground up',
-    oneLiner: 'I designed end-to-end UI for a new AI fashion application, accelerating product development and stakeholder alignment at a seed-stage startup.',
+    subtitle: 'Building the new generation of the ever-converging world of technology & fashion',
+    oneLiner: 'I designed end-to-end UI for a new AI fashion IOS application, accelerating product development and stakeholder alignment at a seed-stage startup.',
     category: 'design',
-    tags: ['Product Design', 'AI App', '0 to 1', 'Shipped'],
+    context: 'Professional',
+    tags: ['AI Design', 'Startup', 'UX Design', 'UX Research'],
     year: 2025,
-    aiUsed: true,
-    thumbnail: '',
-    heroImage: '',
+    thumbnail: forteDesign,
+    heroImage: forteDesign,
     role: 'Product Design Intern',
-    overview: 'Forte is a seed-stage startup building an AI-powered fashion tool. I joined as the lead product design intern and owned the end-to-end UI across the core application.',
+    overview: 'Forte is a seed-stage startup building an AI-powered fashion tool. I joined as the sole product design intern and owned end-to-end UI development for core application features.',
     challenge: 'No existing design system, a small cross-functional team, and the need to move from concept to investor-ready prototype in under 3 months.',
     process: [
       {
@@ -64,96 +120,100 @@ export const projects: Project[] = [
         heading: 'UI Design & Prototyping',
         body: 'Built functional Figma prototypes for all core flows, establishing a component library that reduced engineering handoff friction.',
       },
+      {
+        heading: 'Cost Model Development and Funding Research',
+        body: 'Created a comprehensive cost model spanning production, regulatory compliance, overhead, and third-party integration to scope the full investment required to bring the product to market, informing funding strategy and resource allocation decisions.',
+      },
     ],
-    aiWorkflow: 'Used AI tools including Figma AI for rapid wireframe variation generation and Claude for competitive analysis synthesis, cutting research compilation time by over half.',
     outcomes: [
       'Full application UI delivered in 8 weeks',
       'Prototypes used directly in investor pitch materials',
       'Component library adopted by engineering team',
     ],
+    media: [
+      { src: forteSwot, caption: 'SWOT Analysis — Competitive Landscape Review' },
+      { src: forteCompanalysis, caption: 'Competitive Analysis Across 12 Direct & Indirect Competitors' },
+      { src: forteVer1, caption: 'Forte App UI — Version 1 Prototype' },
+    ],
   },
   {
     slug: 'coequelle',
-    title: 'Coquélle Co. Brand & Product Design',
-    subtitle: 'Building a beauty brand identity and product design system from scratch',
-    oneLiner: 'I created the full brand identity, packaging design, and go-to-market visual system for OvO, an antimicrobial beauty sponge launching at $20 MSRP.',
-    category: 'design',
-    tags: ['Brand Identity', 'Product Design', 'Logo Design', 'Startup'],
-    year: 2025,
-    aiUsed: false,
-    thumbnail: '',
-    heroImage: '',
-    role: 'CMO / Head of Brand Design',
-    overview: 'Coquélle Co. is a four-person founding team building OvO, an antimicrobial beauty sponge targeting Gen Z beauty consumers. As CMO, I owned the entire brand identity and visual design system.',
-    challenge: 'Creating a brand that feels aspirational but accessible, trend-forward but not trend-dependent, and that could scale from DTC to professional MUA channels.',
+    title: 'Coquélle Co. Brand Strategy & Go-to-Market',
+    subtitle: 'Cofounder leading brand identity, market strategy, and GTM design for a next gen beauty startup',
+    oneLiner: 'As CMO and Head of Marketing, I built the full brand identity, customer strategy, and go-to-market system for OvO: a sustainable antimicrobial beauty sponge targeting a $1B market.',
+    category: 'strategy',
+    context: 'Academic',
+    tags: ['GTM Strategy', 'Market Research', 'Pitch Material Design'],
+    year: 2026,
+    thumbnail: coquelleDesign,
+    heroImage: coquelleDesign,
+    role: 'Co-Founder, Head of Marketing + Brand Design',
+    overview: 'Coquélle Co. is a women-led beauty startup I co-founded with three industry professionals as a part of the Rutgers Masters of Business and Science Program. As Head of Marketing + Brand Design, I owned brand identity, consumer research, competitive positioning, and the full go-to-market strategy for OvO: a cosmetic sponge with a structural inner core that solves the hygiene and waste crisis conventional sponges have ignored for decades.',
+    challenge: 'Building a brand compelling enough to earn trust from professional MUAs first, then scale to Gen Z mass-market consumers across DTC, Amazon FBA, and pro distributor channels. Doing so without sacrificing brand integrity at any tier, and with clear strategic intent.',
     process: [
       {
-        heading: 'Brand Strategy & Voice',
-        body: 'Defined four brand voice pillars: knowledgeable not clinical, aspirational not exclusive, playful not frivolous, and conscious not preachy.',
+        heading: 'Market Research & Competitive Analysis',
+        body: 'Led primary and secondary research across the $1B beauty sponge category. Conducted TAM/SAM/SOM analysis ($970M TAM, $164M SAM, ~$12M SOM Years 1–3), competitor case studies on BeautyBlender, RealTechniques, and EcoTools, and synthesized Mintel, IBISWorld, and other data sources to identify Coquélle\'s whitespace: the hygiene gap every major player is ignoring and every consumer is just dealing with.',
       },
       {
-        heading: 'Visual Identity System',
-        body: 'Developed a full color palette (Deep Plum, Blush, Porcelain, Champagne, Mint Glass, Lavender) with three collectible sponge colorways and a complete logo system.',
+        heading: '3-Tiered Customer Strategy',
+        body: 'Designed a sequenced customer acquisition model: Pro MUA early adopters (16,884 artists nationally) → Celeb Makeup Gurus and microinfluencers under 150K as market shifters → the Hygienic Consumer, a health-conscious 18–35-year-old spending ~$9,500/year on beauty. Mapped channel strategy to each tier: trade seeding, influencer PR, then TikTok/Instagram mass launch.',
       },
       {
-        heading: 'Customer Personas & GTM Design',
-        body: 'Built the "Conscious Zoe" customer persona and designed visual assets across all five GTM phases targeting TikTok-driven Gen Z consumers.',
+        heading: 'Go-to-Market Strategy',
+        body: 'Developed a five-phase sequential GTM plan: IP and legal, product development, domestic manufacturing via TaikiUSA, 3PL fulfillment through Pro\'s in Levittown PA, and launch/growth. Defined channel mix at launch: 50% Amazon FBA (discovery volume), 40% DTC Shopify (brand ownership), 10% professional distributor (credibility seeding).',
       },
     ],
     outcomes: [
-      'Full brand identity system ready for manufacturer handoff',
-      'Business plan and investor deck completed for capstone presentation',
-      'IP portfolio strategy developed across utility patents, design patents, and trademark filings',
+      'Investor-grade business plan and pitch deck authored and presented to angel investors as Rutgers MBS Capstone',
+      'Full brand identity and voice system developed and ready for commercial launch',
+      'Three-tier customer model and influencer seeding strategy designed for Year 2–3 launch activation',
     ],
-  },
-  {
-    slug: 'student-dashboard',
-    title: 'React + TypeScript Student Dashboard',
-    subtitle: 'A custom-built academic tool with notebook-paper aesthetics',
-    oneLiner: 'I built a fully functional student dashboard in React and TypeScript using Vite, featuring custom notebook-paper styling, live data components, and a modular component architecture.',
-    category: 'code',
-    tags: ['React', 'TypeScript', 'Vite', 'Frontend Dev'],
-    year: 2025,
-    aiUsed: true,
-    thumbnail: '',
-    heroImage: '',
-    role: 'Solo Developer',
-    overview: 'An academic project requiring a production-grade student dashboard built from scratch in React and TypeScript with Vite as the build tool.',
-    challenge: 'Designing and engineering a component-based application with real interactivity, custom styling, and TypeScript type safety — all within a coursework timeline.',
-    process: [
-      {
-        heading: 'Architecture Planning',
-        body: 'Planned a modular component hierarchy with typed props throughout, establishing reusable patterns for data display, navigation, and state management.',
-      },
-      {
-        heading: 'Custom Design System',
-        body: 'Created a notebook-paper visual theme from scratch using CSS custom properties, box shadows, and texture overlays — no UI library dependencies.',
-      },
-      {
-        heading: 'TypeScript Implementation',
-        body: 'Implemented strict TypeScript interfaces across all components and data layers, ensuring type safety from API simulation through to rendered UI.',
-      },
-    ],
-    aiWorkflow: 'Used Claude to debug TypeScript type errors and optimize component architecture decisions, treating it as a senior developer pairing session rather than a code generator.',
-    outcomes: [
-      'Fully functional dashboard with live component state',
-      'Zero TypeScript errors in final build',
-      'Custom design system with no external UI library dependencies',
+    media: [
+      { src: coq1, caption: 'Slide 1' },
+      { src: coq2, caption: 'Slide 2' },
+      { src: coq3, caption: 'Slide 3' },
+      { src: coq4, caption: 'Slide 4' },
+      { src: coq5, caption: 'Slide 5' },
+      { src: coq6, caption: 'Slide 6' },
+      { src: coq7, caption: 'Slide 7' },
+      { src: coq8, caption: 'Slide 8' },
+      { src: coq9, caption: 'Slide 9' },
+      { src: coq10, caption: 'Slide 10' },
+      { src: coq11, caption: 'Slide 11' },
+      { src: coq12, caption: 'Slide 12' },
+      { src: coq13, caption: 'Slide 13' },
+      { src: coq14, caption: 'Slide 14' },
+      { src: coq15, caption: 'Slide 15' },
+      { src: coq16, caption: 'Slide 16' },
+      { src: coq17, caption: 'Slide 17' },
+      { src: coq18, caption: 'Slide 18' },
+      { src: coq19, caption: 'Slide 19' },
+      { src: coq20, caption: 'Slide 20' },
+      { src: coq21, caption: 'Slide 21' },
+      { src: coq22, caption: 'Slide 22' },
+      { src: coq23, caption: 'Slide 23' },
+      { src: coq24, caption: 'Slide 24' },
+      { src: coq25, caption: 'Slide 25' },
+      { src: coq26, caption: 'Slide 26' },
+      { src: coq27, caption: 'Slide 27' },
+      { src: coq28, caption: 'Slide 28' },
+      { src: coq29, caption: 'Slide 29' },
     ],
   },
   {
     slug: 'off-screen',
-    title: 'Off Screen — Hobby Discovery Platform',
+    title: 'Off Screen Hobby Discovery Platform',
     subtitle: 'A full-stack web platform encouraging people to step away from screens',
-    oneLiner: 'I designed and built a multi-page hobby discovery platform featuring a TypeScript personality quiz, Bootstrap filter system, and a complete custom CSS design system.',
-    category: 'code',
-    tags: ['TypeScript', 'Bootstrap', 'HTML/CSS', 'UX Design', 'Full Stack'],
+    oneLiner: 'We designed and built a multi-page hobby discovery platform featuring a TypeScript personality quiz, Bootstrap filter system, and a complete custom CSS design system.',
+    category: 'development',
+    context: 'Academic',
+    tags: ['Web Design', 'HTML/CSS', 'Vibe Coding', 'Brand Design'],
     year: 2025,
-    aiUsed: true,
-    thumbnail: '',
-    heroImage: '',
-    role: 'Solo Designer & Developer',
-    overview: 'Off Screen is a personal side project under Unplug Co., a concept platform built to help people discover offline hobbies and third-space communities.',
+    thumbnail: offscreenDesign,
+    heroImage: offscreenDesign,
+    role: 'Team Designer & Developer',
+    overview: 'Off Screen is a academic project created under the Professional Science MBS Program at Rutgers University. We created Unplug Co., a concept platform built to help people discover offline hobbies and third-space communities.',
     challenge: 'Building a complete multi-page site with a functional quiz engine, filter sidebar, and design system — solo, from scratch, in TypeScript and vanilla CSS.',
     process: [
       {
@@ -169,45 +229,19 @@ export const projects: Project[] = [
         body: 'Created a complete custom color system and CSS architecture, then built out the explore page with Bootstrap filter sidebar and hobby cards.',
       },
     ],
-    aiWorkflow: 'Used Claude to architect the TypeScript quiz OOP class structure and work through edge cases in the branching logic before writing the final implementation.',
     outcomes: [
-      'Full multi-page site shipped on deadline',
+      'Multi-page site created using React, leveraging vibe coding skills',
       'TypeScript quiz with 6 hobby categories and branching logic',
-      'Custom CSS design system with no framework dependency',
+      'Custom CSS design system',
     ],
-  },
-  {
-    slug: 'rise-fall-genre',
-    title: 'The Rise and Fall of Genre',
-    subtitle: 'A narrative data visualization using IMDb data in Tableau',
-    oneLiner: 'I built a Tableau data story tracing the life cycles of film genres across 100 years of cinema, using narrative arc structure to guide the viewer through complex trends.',
-    category: 'ux',
-    tags: ['Data Visualization', 'Tableau', 'Storytelling', 'Research'],
-    year: 2024,
-    aiUsed: false,
-    thumbnail: '',
-    heroImage: '',
-    role: 'Solo Researcher & Designer',
-    overview: 'A Tableau final project using IMDb data to visualize how film genres rise and fall in cultural relevance across different decades.',
-    challenge: 'Making 100 years of film data legible and emotionally engaging without sacrificing analytical rigor.',
-    process: [
-      {
-        heading: 'Data Cleaning & Structuring',
-        body: 'Processed and cleaned the IMDb dataset, standardizing genre labels and filtering for statistical significance across each decade.',
-      },
-      {
-        heading: 'Narrative Arc Design',
-        body: 'Structured the visualization as a three-act story: emergence, peak, and decline — borrowing from screenwriting to give the data a shape viewers could follow.',
-      },
-      {
-        heading: 'Visual Encoding & Brand Design',
-        body: 'Applied a custom color palette with diverging encodings for genre families, and used annotation layers to call out cultural inflection points.',
-      },
-    ],
-    outcomes: [
-      'Full narrative Tableau dashboard delivered',
-      'Data story structure cited by instructor as exemplary',
-      'Demonstrates cross-disciplinary thinking: film theory + data science',
+    media: [
+      { src: offscreenWireframe1, caption: 'Wireframe — Version 1' },
+      { src: offscreenWireframe2, caption: 'Wireframe — Version 2' },
+      { src: offscreenWireframe3, caption: 'Wireframe — Version 3' },
+      { src: offscreenExplore, caption: 'Explore Page' },
+      { src: offscreenResources, caption: 'Resources Page' },
+      { src: offscreenCommunity, caption: 'Community Page' },
+      { src: offscreenQuiz, caption: 'Quiz Page' },
     ],
   },
 ];

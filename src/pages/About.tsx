@@ -1,11 +1,12 @@
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import gradVideo from '../assets/gradcelebration.mov';
 import './About.css';
 
 const skills: Record<string, string[]> = {
   'Languages': ['Python', 'TypeScript', 'JavaScript', 'HTML', 'CSS'],
   'Frameworks': ['React', 'Vite', 'Bootstrap'],
   'Design Tools': ['Figma', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'Sketch', 'Tableau'],
-  'AI Tools': ['Claude API', 'Figma AI', 'ChatGPT', 'Anthropic SDK'],
   'Research Methods': ['User Interviews', 'Usability Testing', 'Card Sorting', 'Journey Mapping', 'Competitive Analysis'],
 };
 
@@ -21,33 +22,56 @@ const education = [
 ];
 
 export default function About() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [paused, setPaused] = useState(false);
+
+  function togglePlay() {
+    const v = videoRef.current;
+    if (!v) return;
+    if (v.paused) { v.play(); setPaused(false); }
+    else { v.pause(); setPaused(true); }
+  }
+
   return (
     <main className="about">
       <section className="about__header">
         <motion.div className="about__header-inner" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75 }}>
           <p className="about__label">About</p>
           <h1 className="about__name">Jaime Arrington</h1>
-          <p className="about__title">Creative UX Specialist & AI Practitioner</p>
+          <p className="about__title">Creative UX Specialist</p>
         </motion.div>
       </section>
 
       <section className="about__bio-section">
         <div className="about__bio-inner">
-          <div className="about__bio-photo"><div className="about__photo-placeholder"><span>Photo</span></div></div>
+          <div className="about__bio-photo">
+            <div className="about__video-wrap" onClick={togglePlay}>
+              <video
+                ref={videoRef}
+                src={gradVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="about__bio-video"
+              />
+              {paused && <div className="about__video-play-hint">▶</div>}
+            </div>
+          </div>
           <div className="about__bio-text">
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              My path has never been linear. I've moved through behavioral neuroscience research, computational modeling, medical administration, service industry, and international modeling — not in spite of ambition, but because of it. Each space taught me something the others couldn't.
+              My path has never been linear. I've moved through assistant teaching, various types of scientific research, computational modeling, medical administration, the service industry, fashion merchandise sales, and even international runway modeling. This is an unconventional path I’ve taken, not in spite of ambition, but because of it! Each space I’ve been in has taught me something the others couldn't.
             </motion.p>
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
-              The throughline across all of it is people — understanding how they think, what they need, and where systems fail them. That's what brought me to UX, and what keeps me pushing toward the intersection of human behavior and AI.
+              The throughline across all of it is people. A main driving factor in how I approach work and life is understanding how we think, what guides our behaviors, and where systems fail us. That's what brought me to UX and what keeps me pushing toward the intersection of human behavior and the ways technology has changed it. 
             </motion.p>
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
-              Right now I'm finishing my MBS in Computer and Information Sciences at Rutgers, building products at Forte, and co-founding Coquélle Co. I use AI not as a shortcut but as a collaborator — and I document every step of it.
+              Right now, I’m celebrating my MBS in Computer and Information Sciences at Rutgers, building customer-relations experience at Aritzia’s flagship location, and searching for a position that allows me to continue my uniquely authentic pursuit of knowledge. 
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }} className="about__bio-links">
-              <a href="mailto:hello@jaimearrington.com" className="about__bio-link">Email ↗</a>
-              <a href="https://linkedin.com/in/jaimearrington" target="_blank" rel="noopener noreferrer" className="about__bio-link">LinkedIn ↗</a>
-              <a href="/resume.pdf" target="_blank" className="about__bio-link about__bio-link--primary">Download Résumé ↗</a>
+              <a href="mailto:jaimearrington57@gmail.com" className="about__bio-link">Email ↗</a>
+              <a href="https://www.linkedin.com/in/jaime-arrington-132443226" target="https://www.linkedin.com/in/jaime-arrington-132443226" rel="noopener noreferrer" className="about__bio-link">LinkedIn ↗</a>
+              <a href="/JaimeAMBS-Resume.pdf" target="_blank" className="about__bio-link about__bio-link--primary">Download Résumé ↗</a>
             </motion.div>
           </div>
         </div>

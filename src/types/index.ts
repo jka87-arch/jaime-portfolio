@@ -1,23 +1,22 @@
-export type ProjectCategory = 'ux' | 'code' | 'design';
-
+export type ProjectCategory = 'design' | 'research' | 'development' | 'strategy';
 export interface Project {
   slug: string;
   title: string;
   subtitle: string;
   oneLiner: string;
   category: ProjectCategory;
+  context: 'Academic' | 'Professional';
   tags: string[];
   year: number;
-  aiUsed: boolean;
   thumbnail: string;
   heroImage: string;
   role: string;
   overview: string;
   challenge: string;
   process: ProcessSection[];
-  aiWorkflow?: string;
   outcomes: string[];
   nextSteps?: string;
+  media?: { src: string; caption: string }[];
 }
 
 export interface ProcessSection {

@@ -1,11 +1,19 @@
+import { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { projects } from '../data/projects';
 import './CaseStudy.css';
 
+const PLACEHOLDER_MEDIA = [
+  { label: 'Project Media 1', bg: 'rgba(245,239,168,0.12)' },
+  { label: 'Project Media 2', bg: 'rgba(245,239,168,0.08)' },
+  { label: 'Project Media 3', bg: 'rgba(245,239,168,0.16)' },
+];
+
 export default function CaseStudy() {
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find(p => p.slug === slug);
+  const [mediaIndex, setMediaIndex] = useState(0);
 
   if (!project) return <Navigate to="/" replace />;
 
@@ -39,8 +47,7 @@ export default function CaseStudy() {
               {project.tags.map(tag => (
                 <span key={tag} className="cs-tag">{tag}</span>
               ))}
-              {project.aiUsed && <span className="cs-tag cs-tag--ai">✦ AI-assisted</span>}
-            </div>
+              </div>
             <h1 className="cs-title">{project.title}</h1>
             <p className="cs-subtitle">{project.subtitle}</p>
           </motion.div>
@@ -104,26 +111,79 @@ export default function CaseStudy() {
         </div>
       </section>
 
-      {/* AI in My Workflow */}
-      {project.aiWorkflow && (
-        <section className="cs-ai-section">
-          <div className="cs-inner">
-            <motion.div
-              className="cs-ai-callout"
+      {/* Case Media Carousel */}
+      <section className="cs-media-section">
+        <div className="cs-inner">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            >
-              <div className="cs-ai-header">
-                <span className="cs-ai-icon">✦</span>
-                <h2 className="cs-ai-heading">AI in My Workflow</h2>
-              </div>
-              <p className="cs-ai-body">{project.aiWorkflow}</p>
-            </motion.div>
-          </div>
-        </section>
-      )}
+          >
+            <h2 className="cs-media-heading">Case Media</h2>
+            {(() => {
+              const count = project.media ? project.media.length : PLACEHOLDER_MEDIA.length;
+              return (
+                <>
+                  <div className="cs-carousel">
+                    <button
+                      className="cs-carousel-btn"
+                      onClick={() => setMediaIndex(i => Math.max(0, i - 1))}
+                      disabled={mediaIndex === 0}
+                      aria-label="Previous image"
+                    >
+                      ←
+                    </button>
+
+                    <div className="cs-carousel-stage">
+                      {project.media ? project.media.map((item, i) => (
+                        <div
+                          key={i}
+                          className={`cs-carousel-slide ${i === mediaIndex ? 'cs-carousel-slide--active' : ''}`}
+                          aria-hidden={i !== mediaIndex}
+                        >
+                          <img src={item.src} alt={item.caption} className="cs-carousel-img" />
+                          <p className="cs-carousel-caption">{item.caption}</p>
+                        </div>
+                      )) : PLACEHOLDER_MEDIA.map((item, i) => (
+                        <div
+                          key={i}
+                          className={`cs-carousel-slide ${i === mediaIndex ? 'cs-carousel-slide--active' : ''}`}
+                          aria-hidden={i !== mediaIndex}
+                        >
+                          <div className="cs-media-placeholder" style={{ background: item.bg }}>
+                            <span className="cs-media-placeholder-label">{item.label}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <button
+                      className="cs-carousel-btn"
+                      onClick={() => setMediaIndex(i => Math.min(count - 1, i + 1))}
+                      disabled={mediaIndex === count - 1}
+                      aria-label="Next image"
+                    >
+                      →
+                    </button>
+                  </div>
+
+                  <div className="cs-carousel-dots">
+                    {Array.from({ length: count }).map((_, i: number) => (
+                      <button
+                        key={i}
+                        className={`cs-carousel-dot ${i === mediaIndex ? 'cs-carousel-dot--active' : ''}`}
+                        onClick={() => setMediaIndex(i)}
+                        aria-label={`Go to image ${i + 1}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              );
+            })()}
+          </motion.div>
+        </div>
+      </section>
 
       {/* Outcomes */}
       <section className="cs-outcomes-section">
