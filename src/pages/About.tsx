@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+
 import { motion } from 'framer-motion';
 import './About.css';
 
@@ -21,9 +21,6 @@ const education = [
 ];
 
 export default function About() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [paused, setPaused] = useState(false);
-
   return (
     <main className="about">
       <section className="about__header">
