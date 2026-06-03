@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import gradVideo from '../assets/gradcelebration.mp4';
 import './About.css';
 
 const skills: Record<string, string[]> = {
@@ -45,17 +44,13 @@ export default function About() {
       <section className="about__bio-section">
         <div className="about__bio-inner">
           <div className="about__bio-photo">
-            <div className="about__video-wrap" onClick={togglePlay}>
-              <video
-                ref={videoRef}
-                src={gradVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="about__bio-video"
+            <div className="about__video-wrap">
+              <iframe
+                src="https://player.cloudinary.com/embed/?cloud_name=dsiwjufh2&public_id=gradcelebration_dqnen9"
+                className="about__video"
+                allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                allowFullScreen
               />
-              {paused && <div className="about__video-play-hint">▶</div>}
             </div>
           </div>
           <div className="about__bio-text">
