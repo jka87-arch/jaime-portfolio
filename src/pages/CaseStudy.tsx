@@ -111,7 +111,7 @@ export default function CaseStudy() {
         </div>
       </section>
 
-      {/* Case Media Carousel */}
+      {/* Case Media */}
       <section className="cs-media-section">
         <div className="cs-inner">
           <motion.div
@@ -121,7 +121,17 @@ export default function CaseStudy() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="cs-media-heading">Case Media</h2>
-            {(() => {
+
+            {project.driveEmbed ? (
+              <div className="cs-drive-embed-wrap">
+                <iframe
+                  src={project.driveEmbed}
+                  className="cs-drive-embed"
+                  allow="autoplay"
+                  title={`${project.title} — full document`}
+                />
+              </div>
+            ) : (() => {
               const count = project.media ? project.media.length : PLACEHOLDER_MEDIA.length;
               return (
                 <>

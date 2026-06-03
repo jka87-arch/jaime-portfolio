@@ -17,6 +17,7 @@ export interface Project {
   outcomes: string[];
   nextSteps?: string;
   media?: { src: string; caption: string }[];
+  driveEmbed?: string;
 }
 
 export interface ProcessSection {

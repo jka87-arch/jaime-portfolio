@@ -305,6 +305,22 @@
   background: rgba(245, 239, 168, 0.55);
 }
 
+/* Drive embed */
+.cs-drive-embed-wrap {
+  width: 100%;
+  aspect-ratio: 8.5 / 11;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.cs-drive-embed {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
 /* Outcomes */
 .cs-outcomes-section {
   background: var(--near-black);

@@ -17,35 +17,6 @@ import offscreenExplore from '../assets/offscreen-explore.png';
 import offscreenResources from '../assets/offscreen-resources.png';
 import offscreenCommunity from '../assets/offscreen-community.png';
 import offscreenQuiz from '../assets/offscreen-quiz.png';
-import coq1 from '../assets/1.png';
-import coq2 from '../assets/2.png';
-import coq3 from '../assets/3.png';
-import coq4 from '../assets/4.png';
-import coq5 from '../assets/5.png';
-import coq6 from '../assets/6.png';
-import coq7 from '../assets/7.png';
-import coq8 from '../assets/8.png';
-import coq9 from '../assets/9.png';
-import coq10 from '../assets/10.png';
-import coq11 from '../assets/11.png';
-import coq12 from '../assets/12.png';
-import coq13 from '../assets/13.png';
-import coq14 from '../assets/14.png';
-import coq15 from '../assets/15.png';
-import coq16 from '../assets/16.png';
-import coq17 from '../assets/17.png';
-import coq18 from '../assets/18.png';
-import coq19 from '../assets/19.png';
-import coq20 from '../assets/20.png';
-import coq21 from '../assets/21.png';
-import coq22 from '../assets/22.png';
-import coq23 from '../assets/23.png';
-import coq24 from '../assets/24.png';
-import coq25 from '../assets/25.png';
-import coq26 from '../assets/26.png';
-import coq27 from '../assets/27.png';
-import coq28 from '../assets/28.png';
-import coq29 from '../assets/29.png';
 
 export const projects: Project[] = [
   {
@@ -169,37 +140,7 @@ export const projects: Project[] = [
       'Full brand identity and voice system developed and ready for commercial launch',
       'Three-tier customer model and influencer seeding strategy designed for Year 2–3 launch activation',
     ],
-    media: [
-      { src: coq1, caption: 'Slide 1' },
-      { src: coq2, caption: 'Slide 2' },
-      { src: coq3, caption: 'Slide 3' },
-      { src: coq4, caption: 'Slide 4' },
-      { src: coq5, caption: 'Slide 5' },
-      { src: coq6, caption: 'Slide 6' },
-      { src: coq7, caption: 'Slide 7' },
-      { src: coq8, caption: 'Slide 8' },
-      { src: coq9, caption: 'Slide 9' },
-      { src: coq10, caption: 'Slide 10' },
-      { src: coq11, caption: 'Slide 11' },
-      { src: coq12, caption: 'Slide 12' },
-      { src: coq13, caption: 'Slide 13' },
-      { src: coq14, caption: 'Slide 14' },
-      { src: coq15, caption: 'Slide 15' },
-      { src: coq16, caption: 'Slide 16' },
-      { src: coq17, caption: 'Slide 17' },
-      { src: coq18, caption: 'Slide 18' },
-      { src: coq19, caption: 'Slide 19' },
-      { src: coq20, caption: 'Slide 20' },
-      { src: coq21, caption: 'Slide 21' },
-      { src: coq22, caption: 'Slide 22' },
-      { src: coq23, caption: 'Slide 23' },
-      { src: coq24, caption: 'Slide 24' },
-      { src: coq25, caption: 'Slide 25' },
-      { src: coq26, caption: 'Slide 26' },
-      { src: coq27, caption: 'Slide 27' },
-      { src: coq28, caption: 'Slide 28' },
-      { src: coq29, caption: 'Slide 29' },
-    ],
+    driveEmbed: 'https://drive.google.com/file/d/1Ke4YAYSYMZ13ygIQfzK6dCLwj56ydFsp/preview',
   },
   {
     slug: 'off-screen',
