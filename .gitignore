@@ -25,3 +25,9 @@ dist-ssr
 *.mov
 *.mp4
 *.avi
+
+echo "src/assets/forte-design.png" >> .gitignore
+echo "src/assets/gradcelebration.mov" >> .gitignore
+echo "src/assets/offscreen-explore.png" >> .gitignore
+echo "src/assets/offscreen-resources.png" >> .gitignore
+echo "src/assets/offscreen-community.png" >> .gitignore
