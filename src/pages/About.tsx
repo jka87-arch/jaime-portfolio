@@ -24,13 +24,6 @@ export default function About() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [paused, setPaused] = useState(false);
 
-  function togglePlay() {
-    const v = videoRef.current;
-    if (!v) return;
-    if (v.paused) { v.play(); setPaused(false); }
-    else { v.pause(); setPaused(true); }
-  }
-
   return (
     <main className="about">
       <section className="about__header">
@@ -46,7 +39,7 @@ export default function About() {
           <div className="about__bio-photo">
             <div className="about__video-wrap">
               <iframe
-                src="https://player.cloudinary.com/embed/?cloud_name=dsiwjufh2&public_id=gradcelebration_dqnen9"
+                src="https://player.cloudinary.com/embed/?cloud_name=dsiwjufh2&public_id=gradcelebration_dqnen9&autoplay=true&muted=true&loop=true&controls=false&background=true"
                 className="about__video"
                 allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
                 allowFullScreen
